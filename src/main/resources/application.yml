@@ -1,0 +1,30 @@
+server:
+  port: 9000
+spring:
+  security:
+    user:
+      name: user
+      password: pass
+  application:
+    name: user-microservice
+  datasource:
+    url: jdbc:postgresql://localhost:5432/userdb
+    username: postgres
+    password: 1234
+    driverClassName: com.postgresql.jdbc.Driver
+    hikari:
+      maximumPoolSize: 10
+  jpa:
+    show-sql: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.SQLServerDialect
+
+logging:
+  file:
+    name: /Oasis/User-Microservice/Logging/${spring.application.name}/logs

@@ -8,11 +8,6 @@ import lombok.Data;
 
 import java.util.Date;
 
-
-
-
-
-
 @Entity
 @Data
 @Table(name = "credit_card")

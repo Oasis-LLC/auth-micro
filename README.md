@@ -1,2 +1,2 @@
-# auth-micro
-Auth Microservice API for Oasis Ecommerce Store
+# User Microservice
+User Microservice API for Oasis Ecommerce Store

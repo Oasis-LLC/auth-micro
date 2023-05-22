@@ -1,43 +1,30 @@
 package com.oasis.onlinestore.domain;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Table
-@Builder
 public class Address {
-
     @Id
-    private Long id;
-
-    @Column
-
+    @GeneratedValue
+    @Column(name = "AddressID")
+    private Integer id;
+    @Column(name = "AddressType")
+    private AddressType addressType;
+    @Column(name = "City")
     private String city;
-    @Column
+    @Column(name = "Street")
     private String street;
-    @Column
+    @Column(name = "ZipCode")
     private String zip;
-
+    @Column(name = "State")
     private String state;
-
-
-    @Column
-    private String statgite;
-
-
-
-
-
 }
+

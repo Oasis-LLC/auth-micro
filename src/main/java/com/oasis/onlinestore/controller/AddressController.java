@@ -17,8 +17,5 @@ public class AddressController {
     private final AddressService productService;
 
 
-    public void creatAddress (AddressRequest , addrressRequest ){
-        productService.creatProduct(addrressRequest);
 
-    }
 }

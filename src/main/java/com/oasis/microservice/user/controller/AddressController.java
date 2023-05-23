@@ -25,8 +25,8 @@ public class AddressController {
     }
 
     @GetMapping("/{id}")
-    public AddressResponse findById(String id) {
-        // TODO: Implement this method body
-        return null;
+    public AddressResponse findById(Long id) {
+
+        return mapper.map(addressService.findById(id),AddressResponse.class);
     }
 }

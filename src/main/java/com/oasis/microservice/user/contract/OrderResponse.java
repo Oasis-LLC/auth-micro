@@ -3,9 +3,11 @@ package com.oasis.microservice.user.contract;
 import com.oasis.microservice.user.domain.Address;
 import com.oasis.microservice.user.domain.User;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+@NoArgsConstructor
 @Data
 public class OrderResponse {
     private String id;

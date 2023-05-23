@@ -31,4 +31,15 @@ public class UserService {
     public User findByEmail(String email) {
         return userRepository.findByEmail(email);
     }
+
+    public boolean existsByEmail(String email) {
+        return userRepository.existsByEmail(email);
+    }
+
+    public User signup(User user) {
+        if (existsByEmail(user.getEmail())) {
+            throw new RuntimeException("User already exists");
+        }
+        return userRepository.save(user);
+    }
 }

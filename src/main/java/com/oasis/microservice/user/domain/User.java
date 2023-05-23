@@ -39,4 +39,6 @@ public class User {
     private List<CreditCard> creditCards;
     @Transient
     private List<OrderResponse> orders;
+    @Enumerated
+    private Role role;
 }

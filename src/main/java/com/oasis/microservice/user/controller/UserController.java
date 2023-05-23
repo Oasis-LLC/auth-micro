@@ -18,6 +18,7 @@ public class UserController {
     @Autowired
     private ModelMapper mapper;
 
+    @GetMapping
     public Page<UserResponse> findAll(Pageable pageable) {
         return userService.findAll(pageable).map(user -> mapper.map(user, UserResponse.class));
     }

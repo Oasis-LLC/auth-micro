@@ -2,7 +2,9 @@ package com.oasis.microservice.user.contract;
 
 import com.oasis.microservice.user.domain.AddressType;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 @Data
 public class AddressResponse {
     private Integer id;

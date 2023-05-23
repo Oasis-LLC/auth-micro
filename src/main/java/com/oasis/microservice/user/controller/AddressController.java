@@ -26,7 +26,6 @@ public class AddressController {
 
     @GetMapping("/{id}")
     public AddressResponse findById(Long id) {
-
-        return mapper.map(addressService.findById(id),AddressResponse.class);
+        return mapper.map(addressService.findById(id), AddressResponse.class);
     }
 }

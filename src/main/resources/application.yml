@@ -2,9 +2,8 @@ server:
   port: 9000
 spring:
   security:
-    user:
-      name: user
-      password: pass
+    management:
+      enabled: false
   application:
     name: user-microservice
   datasource:
@@ -31,6 +30,11 @@ spring:
         jdbc:
           lob:
             non_contextual_creation: true
+
+management:
+  security:
+    enabled: false
+
 
 logging:
   file:

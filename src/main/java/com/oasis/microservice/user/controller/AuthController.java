@@ -43,6 +43,6 @@ public class AuthController {
     }
 
     private boolean userAlreadyExists(String email) {
-        return userService.findByEmail(email) != null;
+        return userService.existsByEmail(email);
     }
 }

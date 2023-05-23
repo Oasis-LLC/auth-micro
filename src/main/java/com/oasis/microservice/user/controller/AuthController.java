@@ -19,12 +19,10 @@ public class AuthController {
 
     @PostMapping("/signup")
     public ResponseEntity<?> register(@RequestBody User user) {
-        // TODO: Check if user already exists by email
         if (userAlreadyExists(user.getEmail())) {
             return ResponseEntity.badRequest().body("User already exists");
         }
 
-        // TODO: Save user to database and return user response
         User newUser = userService.save(user);
         UserResponse userResponse = modelMapper.map(newUser, UserResponse.class);
 

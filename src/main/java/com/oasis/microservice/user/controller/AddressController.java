@@ -21,7 +21,7 @@ public class AddressController {
 
     @Autowired
 
-    private AddressRepository addressRepository;
+
     private final AddressService productService;
 
     @GetMapping

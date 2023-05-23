@@ -1,5 +1,6 @@
 package com.oasis.microservice.user.domain;
 
+import com.oasis.microservice.user.contract.OrderResponse;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -37,5 +38,5 @@ public class User {
     @OneToMany(cascade = CascadeType.PERSIST)
     private List<CreditCard> creditCards;
     @Transient
-    private List<Order> orders;
+    private List<OrderResponse> orders;
 }

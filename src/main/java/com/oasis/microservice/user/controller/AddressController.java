@@ -1,27 +1,31 @@
 package com.oasis.microservice.user.controller;
 
-import com.oasis.microservice.user.domain.Address;
-import com.oasis.microservice.user.repository.AddressRepository;
-import lombok.RequiredArgsConstructor;
+import com.oasis.microservice.user.contract.AddressResponse;
+import com.oasis.microservice.user.service.AddressService;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.awt.print.Pageable;
-import java.util.List;
-
 @RestController
-@RequestMapping("/api/address")
-@RequiredArgsConstructor
-
+@RequestMapping("/api/addresses")
 public class AddressController {
     @Autowired
-    private AddressRepository addressRepository;
+    private AddressService addressService;
 
-    @GetMapping
-    public List<Address> findAll(Pageable pageable) {
-        return addressRepository.findAll();
+    @Autowired
+    private ModelMapper mapper;
+
+    @GetMapping("/")
+    public Page<AddressResponse> findAll(Pageable pageable) {
+        return addressService.findAll(pageable).map(address -> mapper.map(address, AddressResponse.class));
+    }
+
+    @GetMapping("/{id}")
+    public AddressResponse findById(String id) {
+        return null;
     }
 }

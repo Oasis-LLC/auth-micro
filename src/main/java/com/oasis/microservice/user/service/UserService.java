@@ -16,8 +16,8 @@ public class UserService {
         return userRepository.findAll(pageable);
     }
 
-    public User findById(Long id) {
-        return userRepository.findById(id).orElse(null);
+    public User findById(String id) {
+        return userRepository.findById(id);
     }
 
     public User save(User user) {

@@ -4,7 +4,6 @@ import com.oasis.microservice.user.contract.UserResponse;
 import com.oasis.microservice.user.service.UserService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,7 +25,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public UserResponse findById(Long id) {
+    public UserResponse findById(String id) {
         return mapper.map(userService.findById(id), UserResponse.class);
     }
 }

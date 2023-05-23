@@ -4,33 +4,28 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
-@Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Data
-@Table(name = "credit_card")
-
+@Entity
 public class CreditCard {
     @Id
+    @Column(name = "CreditCardID")
     private String id;
-    @Column(name = "card_holder_name")
+    @Column(name = "CardHolderName")
     private String cardHolderName;
-    @Column(name = "card_number")
+    @Column(name = "CardNumber")
     private String cardNumber;
-    @Column(name = "expiry_date")
+    @Column(name = "ExpiryDate")
     private Date expiryDate;
-    @Column(name = "cvv")
+    @Column(name = "CVV")
     private String cvv;
-
-    public CreditCard() {
-    }
-    public CreditCard(String id, String cardHolderName, String cardNumber, Date expiryDate, String cvv) {
-        this.id = id;
-        this.cardHolderName = cardHolderName;
-        this.cardNumber = cardNumber;
-        this.expiryDate = expiryDate;
-        this.cvv = cvv;
-    }
 }
+
+

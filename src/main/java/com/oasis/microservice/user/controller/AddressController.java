@@ -25,7 +25,7 @@ public class AddressController {
     private final AddressService productService;
 
     @GetMapping
-    public Page<Address> findAll(Pageable ) {
+    public Page<Address> findAll(Pageable pageable) {
         return addressRepository.findAll();
     }
 

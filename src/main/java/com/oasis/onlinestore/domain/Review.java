@@ -22,5 +22,5 @@ public class Review {
 
     @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "customerId")
-    private Customer buyer;
+    private User buyer;
 }

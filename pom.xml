@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.oasis</groupId>
-    <artifactId>online-store</artifactId>
+    <artifactId>user-microservice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>online-store</name>
+    <name>user-microservice</name>
     <description>E-Commerce Store API</description>
     <properties>
         <java.version>17</java.version>

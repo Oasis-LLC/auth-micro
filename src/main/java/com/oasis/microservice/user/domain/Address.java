@@ -20,6 +20,10 @@ public class Address {
     private Integer id;
     @Column(name = "AddressType")
     private AddressType addressType;
+    @Column(name = "AddressLine1")
+    private String line1;
+    @Column(name = "AddressLine2")
+    private String line2;
     @Column(name = "City")
     private String city;
     @Column(name = "Street")

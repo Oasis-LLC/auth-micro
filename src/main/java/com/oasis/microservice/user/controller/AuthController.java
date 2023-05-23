@@ -5,6 +5,7 @@ import com.oasis.microservice.user.domain.User;
 import com.oasis.microservice.user.service.UserService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,7 +27,7 @@ public class AuthController {
         User newUser = userService.save(user);
         UserResponse userResponse = modelMapper.map(newUser, UserResponse.class);
 
-        return ResponseEntity.ok(userResponse);
+        return new ResponseEntity<UserResponse>(userResponse, HttpStatus.CREATED);
     }
 
     @PostMapping("/login")
@@ -38,7 +39,7 @@ public class AuthController {
         User existingUser = userService.findByEmail(user.getEmail());
         UserResponse userResponse = modelMapper.map(existingUser, UserResponse.class);
 
-        return ResponseEntity.ok(userResponse);
+        return new ResponseEntity<UserResponse>(userResponse, HttpStatus.OK);
     }
 
     private boolean userAlreadyExists(String email) {

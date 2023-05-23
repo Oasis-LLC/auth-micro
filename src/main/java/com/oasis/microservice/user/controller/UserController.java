@@ -6,6 +6,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -17,13 +18,25 @@ public class UserController {
     @Autowired
     private ModelMapper mapper;
 
-    @GetMapping("/")
     public Page<UserResponse> findAll(Pageable pageable) {
         return userService.findAll(pageable).map(user -> mapper.map(user, UserResponse.class));
     }
 
     @GetMapping("/{id}")
-    public UserResponse findById(@PathVariable String id) {
-        return mapper.map(userService.findById(id), UserResponse.class);
+    public ResponseEntity<?> findById(@PathVariable String id) {
+        UserResponse user = mapper.map(userService.findById(id), UserResponse.class);
+        return ResponseEntity.ok(user);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<?> update(@PathVariable String id, @RequestBody UserResponse user) {
+        // TODO: Implement this method
+        return null;
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> delete(@PathVariable String id) {
+        // TODO: Implement this method
+        return null;
     }
 }

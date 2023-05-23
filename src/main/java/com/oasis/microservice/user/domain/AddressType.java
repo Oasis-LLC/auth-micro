@@ -1,4 +1,4 @@
-package com.oasis.onlinestore.domain;
+package com.oasis.microservice.user.domain;
 
 public enum AddressType {
     BILLING, SHIPPING

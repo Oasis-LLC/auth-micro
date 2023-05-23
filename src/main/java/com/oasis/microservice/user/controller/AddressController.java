@@ -1,11 +1,9 @@
-package com.oasis.onlinestore.controller;
+package com.oasis.microservice.user.controller;
 
 
-import com.oasis.onlinestore.domain.Address;
-import com.oasis.onlinestore.service.AddressService;
+import com.oasis.microservice.user.service.AddressService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController

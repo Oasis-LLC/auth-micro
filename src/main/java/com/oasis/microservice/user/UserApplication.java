@@ -1,4 +1,4 @@
-package com.oasis.onlinestore;
+package com.oasis.microservice.user;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

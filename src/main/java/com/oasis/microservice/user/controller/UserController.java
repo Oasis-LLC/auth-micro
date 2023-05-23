@@ -1,4 +1,4 @@
-package com.oasis.onlinestore.controller;
+package com.oasis.microservice.user.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 

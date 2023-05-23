@@ -1,6 +1,6 @@
-package com.oasis.onlinestore.repository;
+package com.oasis.microservice.user.repository;
 
-import com.oasis.onlinestore.domain.Address;
+import com.oasis.microservice.user.domain.Address;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface AddressRepository extends JpaRepository<Address, Long> {

@@ -1,6 +1,6 @@
-package com.oasis.onlinestore.repository;
+package com.oasis.microservice.user.repository;
 
-import com.oasis.onlinestore.domain.User;
+import com.oasis.microservice.user.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

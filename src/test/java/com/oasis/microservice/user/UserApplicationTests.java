@@ -1,4 +1,4 @@
-package com.oasis.onlinestore;
+package com.oasis.microservice.user;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

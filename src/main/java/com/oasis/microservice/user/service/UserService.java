@@ -1,4 +1,4 @@
-package com.oasis.onlinestore.service;
+package com.oasis.microservice.user.service;
 
 import org.springframework.stereotype.Service;
 
